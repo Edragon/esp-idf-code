@@ -6,7 +6,7 @@
 void led_init(void)
 {
     gpio_config_t led_pin_config;
-    led_pin_config.pin_bit_mask = 1<<LED_PIN;
+    led_pin_config.pin_bit_mask = 1ULL << LED_PIN;
     led_pin_config.mode = GPIO_MODE_OUTPUT;
     led_pin_config.pull_up_en = GPIO_PULLUP_DISABLE;
     led_pin_config.pull_down_en = GPIO_PULLDOWN_DISABLE;

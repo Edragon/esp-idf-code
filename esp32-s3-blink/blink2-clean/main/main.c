@@ -1,4 +1,9 @@
 
+#include <stdio.h>
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+#include "led.h"
+
 void led_blink_task(void * param)
 {
   
@@ -18,5 +23,8 @@ void app_main(void)
  xTaskCreatePinnedToCore(led_blink_task,"led",4096,NULL,3,NULL,1);
 
 }
+
+
+
 
 
